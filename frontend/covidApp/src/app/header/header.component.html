@@ -1,0 +1,71 @@
+
+<header class="p-3 bg-dark text-white">
+    <div class="container">
+        <div
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+
+            <ul
+                class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+            >
+                <li>
+                    <a
+                        routerLink="/home"
+                        class="nav-link text-white"
+                        routerLinkActive="text-danger"
+                        >Home</a
+                    >
+                </li>
+                <li *ngIf="loggedIn">
+
+                    <a routerLink="/watchlist" class="nav-link ms-2 text-white"
+                        >Watchlist</a
+                    >
+                </li>
+            </ul>
+
+            <a routerLink="/user-profile" *ngIf="loggedIn"  class="nav-link ms-2 text-white" >
+                {{user}}
+            </a>
+
+
+            <div class="text-end">
+                <a
+                    *ngIf="loggedIn"
+                    class="btn btn-outline-light me-2"
+                    routerLink="/user-edit-profile"
+                    style="text-decoration: none"
+                    role="button"
+                    >Edit Profile</a
+                >
+
+                <a
+                    *ngIf="!loggedIn"
+                    class="btn btn-outline-light me-2"
+                    routerLink="/user-login"
+                    style="text-decoration: none"
+                    role="button"
+                    >Login</a
+                >
+                <a
+                    *ngIf="loggedIn"
+                    (click)="logoutUser()"
+                    class="btn btn-outline-light me-2"
+                    routerLink="/user-register"
+                    style="text-decoration: none"
+                    role="button"
+                    >Logout</a
+                >
+                <a
+                    *ngIf="!loggedIn"
+                    class="btn btn-outline-light me-2"
+
+                    routerLink="/user-register"
+                    style="text-decoration: none"
+                    role="button"
+                    >Sign up</a
+                >
+            </div>
+        </div>
+    </div>
+</header>

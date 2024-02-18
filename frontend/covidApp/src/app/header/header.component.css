@@ -1,0 +1,12 @@
+.bg-dark{
+    background-color: #053c69!important;
+}
+button a{
+  color: #cf6a6a !important;
+}
+button:hover {
+  background-color: #fff;
+}
+button:hover a{
+  color: rgb(32, 4, 4) !important;
+}

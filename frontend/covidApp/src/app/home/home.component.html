@@ -1,0 +1,113 @@
+<app-header></app-header>
+<div class="container">
+    <form>
+        <div class="d-flex justify-content-end my-3 row">
+            <label
+                for="table-filtering-search"
+                class="col-xs-3 col-sm-auto col-form-label"
+                >Search for a Country:</label
+            >
+            <div class="col-xs-3 col-sm-auto">
+                <input
+                    id="table-filtering-search"
+                    class="form-control searchTerm"
+                    type="text"
+                    name="searchTerm"
+                    placeholder="For example - India"
+                    [(ngModel)]="searchTerm"
+                    (input)="search(searchTerm)"
+                />
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th>Flag</th>
+                <th scope="col">Country</th>
+                <th scope="col">Infected</th>
+                <th scope="col">Recovererd</th>
+                <th scope="col">Decreased</th>
+                <th scope="col">More</th>
+                <th *ngIf="loggedIn" scope="col" class="text-center">Add To Watch list</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr
+                *ngFor="
+                    let country of countries | searchFilter: searchTerm;
+                    index as i
+                "
+                class=""
+            >
+                <th scope="row">{{ i + 1 }}</th>
+                <th>
+                    <img
+                        src="https://countryflagsapi.com/png/{{
+                            country.country
+                        }}"
+                        alt=""
+                        height="30px"
+                        width="30px"
+                        class="rounded-circle"
+                        style="object-fit: cover"
+                    />
+                </th>
+                <td>
+                    <!-- <ngb-highlight
+                        [result]="country.country"
+                        [term]="filter.value"
+                    ></ngb-highlight> -->
+                </td>
+
+                <td>
+                    <!-- <ngb-highlight
+                        [result]="country.infected"
+                        [term]="filter.value"
+                    ></ngb-highlight> -->
+                </td>
+                <td>
+                    <!-- <ngb-highlight
+                        [result]="country.recovered"
+                        [term]="filter.value"
+                    ></ngb-highlight> -->
+                </td>
+                <td>
+                    <!-- <ngb-highlight
+                        [result]="country.deceased"
+                        [term]="filter.value"
+                    ></ngb-highlight> -->
+                </td>
+                <td>
+                    <a
+                        routerLink="/country/{{ country.country }}/{{
+                            country.moreData.split('/')[5]
+                        }}"
+                        >More</a
+                    >
+                </td>
+                <td *ngIf="loggedIn" class="d-flex justify-content-center">
+                    
+                    <a
+                        class="btn btn-outline-dark me-2 col-6"
+                        (click)="
+                            onAdd(
+                                country.country,
+                                country.deceased,
+                                country.infected,
+                                country.recovered,
+                                country.moreData.split('/')[5]
+                            )
+                        "
+                        style="text-decoration: none"
+                        role="button"
+                        >Add</a
+                    >
+                     
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

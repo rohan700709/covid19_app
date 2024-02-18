@@ -1,0 +1,126 @@
+<section class="gradient-custom">
+
+    <ul
+    class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-left mb-md-0"
+>
+    <li>
+        <div>
+            <p class="mb-0">
+                
+                <a
+                    routerLink="/home"
+                    class="text-white fw-bold"
+                    >Home</a
+                >
+            </p>
+        </div>
+        
+    </li>
+    </ul>
+  
+
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              
+                <div
+                    class="card bg-dark text-white"
+                    style="border-radius: 1rem"
+                >
+                    <div class="card-body p-5 text-center">
+                      <form (ngSubmit)="onSubmit()" [formGroup]="form">
+                        <div class="mt-md-4 pb-4">
+                            <h2 class="fw-bold mb-2 text-uppercase">
+                                Register
+                            </h2>
+                            <p class="text-white-50 mb-5">
+                                Please enter your Details!
+                            </p>
+
+                            <div class="form-group" *ngIf="form.controls['email'].hasError('email')">
+                                <label style="color: red"
+                                    >Invalid Email</label
+                                >
+                            </div>
+
+                           
+                            <div class="form-outline form-white mb-4">
+                                <input
+                                    required
+                                    [(ngModel)]="credentials.userName"
+                                    name="userName"
+                                    type="text"
+                                    id="typeEmailX"
+                                    class="form-control form-control-lg"
+                                    formControlName="userName" 
+                                    placeholder="Ex. John"
+                                />
+                                <label class="form-label" for="typeEmailX"
+                                    >Username</label>
+                                 
+                                
+                            </div>
+
+                            <div class="form-outline form-white mb-4">
+                                <input
+                                required
+                                        [(ngModel)]="credentials.email" 
+                                        name="email"
+
+                                    type="email"
+                                    id="typeEmailX"
+                                    class="form-control form-control-lg"
+                                    formControlName="email"
+                                    placeholder="Ex. john@example.com"
+                                />
+                                <label class="form-label" for="typeEmailX"
+                                    >Email</label
+                                >
+                            </div>
+
+                            <div class="form-outline form-white mb-4">
+                                <input
+                                required
+                                [(ngModel)]="credentials.password"
+                                name="password"
+                                    type="password"
+                                    id="typePasswordX"
+                                    class="form-control form-control-lg"
+                                    formControlName="password"
+                                    placeholder="Ex. Hello%123"
+                                    
+                                />
+                                <label class="form-label" for="typePasswordX"
+                                    >Password</label
+                                >
+                            </div>
+
+                            <button type="button" class="btn btn-success"
+                                type="submit"
+                                [disabled]="form.invalid"
+                            >
+                                Register
+                            </button>
+
+                            <!-- <div class="d-flex justify-content-center text-center mt-4 pt-1">
+                  <a href="#!" class="text-white"><i class="fab fa-google fa-lg"></i></a>
+                </div> -->
+                        </div>
+
+                        <div>
+                            <p class="mb-0">
+                                Already have an account?
+                                <a
+                                    routerLink="/user-login"
+                                    class="text-white fw-bold"
+                                    >Login</a
+                                >
+                            </p>
+                        </div>
+                      </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,63 @@
+<app-header></app-header>
+<section class="vh-100">
+    <div class="container h-100">
+        <div class="row d-flex w-100 align-items-start h-100">
+            <div>
+                <div class="card rounded-3">
+                    <div class="card-body p-4">
+                        <h4 class="text-center my-3 pb-3">Watch-List</h4>
+
+                        <table class="table mb-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">Place</th>
+                                    <th scope="col">Infected</th>
+                                    <th scope="col">Recovered</th>
+                                    <th scope="col">Deceased</th>
+                                    <th scope="col">View</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    *ngFor="
+                                        let country of watchlistCountry;
+                                        let i = index
+                                    "
+                                >
+                                    <th scope="row">{{ i + 1 }}</th>
+                                    <td>{{ watchlistCountry[i].country }}</td>
+                                    <td>{{ watchlistCountry[i].infected }}</td>
+                                    <td>{{ watchlistCountry[i].recovered }}</td>
+                                    <td>{{ watchlistCountry[i].deceased }}</td>
+                                    <td>
+                                        <a
+                                            routerLink="/country/{{
+                                                watchlistCountry[i].country
+                                            }}/{{ watchlistCountry[i].id }}"
+                                            >More</a
+                                        >
+                                    </td>
+                                    <td>
+                                        <button
+                                            type="submit"
+                                            (click)="
+                                                onDelete(
+                                                    watchlistCountry[i].country
+                                                )
+                                            "
+                                            class="btn btn-danger btnoh"
+                                        >
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

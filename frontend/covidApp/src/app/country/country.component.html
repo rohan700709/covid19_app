@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container" style="max-width: 1000px">
+    <div class="card mt-4">
+        <div class="card-header">
+            <h1 class="text-center display-4">{{ countryName }}</h1>
+        </div>
+        <div class="card-body mt-5">
+            <div class="d-flex flex-column mx-4">
+                <div class="d-flex justify-content-between mb-4">
+                    <p class="d-block display-6">
+                        <strong>Infected:</strong>
+                        {{ countryData.infected ? countryData.infected : 'NA' }}
+                    </p>
+                    <p class="d-block display-6">
+                        <strong>Deceased:</strong>
+                        {{ countryData.deceased ? countryData.deceased : 'NA' }}
+                    </p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <p class="d-block display-6">
+                        <strong>Recovered:</strong>
+                        {{
+                            countryData.recovered ? countryData.recovered : 'NA'
+                        }}
+                    </p>
+                    <p class="d-block display-6">
+                        <strong>Active Cases:</strong>
+                        {{
+                            countryData.activeCases
+                                ? countryData.activeCases
+                                : 'NA'
+                        }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

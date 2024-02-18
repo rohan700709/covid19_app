@@ -1,0 +1,25 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #1d1c1c;
+    
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: white;
+    ;
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background:  white;
+    background-image: url("../../img/bg1.jpg"); 
+    background-size:30%; 
+    background-size:cover; 
+
+    }
+.bg-dark{ 
+    background :#287586!important;
+    opacity: 1.0;
+}
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+    border: 2px solid red;
+}
+
+ 

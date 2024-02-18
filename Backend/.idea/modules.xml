@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Backend.iml" filepath="$PROJECT_DIR$/.idea/Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-final-covid-backend/APIGateway/src/main/main.iml" filepath="$PROJECT_DIR$/collection-final-covid-backend/APIGateway/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-final-covid-backend/spring-security-jwt/src/main/main1.iml" filepath="$PROJECT_DIR$/collection-final-covid-backend/spring-security-jwt/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-final-covid-backend/spring-boot-wishlist/src/main/main2.iml" filepath="$PROJECT_DIR$/collection-final-covid-backend/spring-boot-wishlist/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-final-covid-backend/EurekaServer/src/main/main3.iml" filepath="$PROJECT_DIR$/collection-final-covid-backend/EurekaServer/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-final-covid-backend/EurekaServer/src/test/test.iml" filepath="$PROJECT_DIR$/collection-final-covid-backend/EurekaServer/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-final-covid-backend/spring-security-jwt/src/test/test1.iml" filepath="$PROJECT_DIR$/collection-final-covid-backend/spring-security-jwt/src/test/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-final-covid-backend/spring-boot-wishlist/src/test/test2.iml" filepath="$PROJECT_DIR$/collection-final-covid-backend/spring-boot-wishlist/src/test/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/collection-final-covid-backend/APIGateway/src/test/test3.iml" filepath="$PROJECT_DIR$/collection-final-covid-backend/APIGateway/src/test/test3.iml" />
+    </modules>
+  </component>
+</project>

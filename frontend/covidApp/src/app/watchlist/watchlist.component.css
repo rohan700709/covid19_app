@@ -1,0 +1,32 @@
+
+.btn-dark{
+    background-color: #363642!important;
+}
+button:hover{
+    border: 1px solid black;
+    background-color: white!important;
+}
+
+button:hover a{
+    
+    color: #000 !important;
+  }
+
+/* #watchlist {
+    padding: 0 ;
+    margin:0;
+
+} */
+.clrchn{
+    background-color: #363642!important;
+    border: black !important;
+}
+.clrchn:hover{
+    border:1px solid black  !important;
+}
+
+
+.btnoh:hover {
+    color: #000 !important;
+}
+
